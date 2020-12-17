@@ -7,13 +7,13 @@
         <label for="name">Name:</label>
         <input type="text" name="name" id="name" required>
         
-        <label for="email">Name:</label>
+        <label for="email">Email:</label>
         <input type="email" name="email" id="email" required>
         
-        <label for="subject">Name:</label>
+        <label for="subject">Subject:</label>
         <input type="text" name="subject" id="jubject" required>
         
-        <label for="message">Name:</label>
+        <label for="message">Message:</label>
         <textarea id="message" name="message" id="message"></textarea>
         
         <input type="submit" name="send" value="send">
