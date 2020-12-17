@@ -109,6 +109,5 @@ class Contact_Message extends Owner_settings{
                 $this->result_message = "Something went wrong. Please try again later.";
             }
         }
-        return $this->result_message;
     }
 }
