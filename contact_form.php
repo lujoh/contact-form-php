@@ -8,16 +8,16 @@ require_once "contact_form_processing.php"
     <!--This form uses the method POST and when it is submitted it reloads the same page. If you want to load the results on a different page add that page in the action tag-->
     <form name="contact" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
         <label for="name">Name:</label>
-        <input type="text" name="name" id="name">
+        <input type="text" name="name" id="name" required>
         
         <label for="email">Email:</label>
-        <input type="text" name="email" id="email">
+        <input type="email" name="email" id="email" required>
         
         <label for="subject">Subject:</label>
-        <input type="text" name="subject" id="subject">
+        <input type="text" name="subject" id="subject" required>
         
         <label for="message">Message:</label>
-        <textarea id="message" name="message" id="message"></textarea>
+        <textarea id="message" name="message" id="message" required></textarea>
         
         <input type="submit" name="send" value="send">
     </form>

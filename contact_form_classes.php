@@ -95,7 +95,7 @@ class Contact_Message extends Owner_settings{
         $this->full_email_message = "New contact message from " . $this->website_name . "\r\n Sender name: " . $this->sender_name->input_value . "\r\n Sender email: " . $this->sender_email->input_value . "\r\n Subject: " . $this->sender_subject->input_value . "\r\n Message: ". $this->sender_message->input_value;
     }
     
-    //function to process and send the message if ready
+    //method to process and send the message if ready
     function process_message() {
         $this->check_readiness();
         if ($this->ready_to_send == true) {
