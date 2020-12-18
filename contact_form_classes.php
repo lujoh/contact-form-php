@@ -11,8 +11,8 @@ class Input {
     //method to create a new Input object
     function __construct($input_field) {
         $this->input_field = $input_field;
-        set_value();
-        check_input();
+        $this->set_value();
+        $this->check_input();
     }
     
     //method to clean the input value
@@ -22,17 +22,17 @@ class Input {
     
     //method to get the input value
     function set_value() {
-        $this->input_value = clean_input($_POST[$this->input_field]);
+        $this->input_value = $this->clean_input($_POST[$this->input_field]);
     }
     
     //method to check if the input is set and in the right format
     function check_input() {
         if(empty($this->input_value)) {
             $this->input_error_set = true;
-            $this->input_error_message = "Please fill out the " . $this->input_field . "field";
+            $this->input_error_message = "Please fill out the " . $this->input_field . " field. <br>";
         } else {
             if($this->input_field == "email") {
-                check_email_format($this->input_value);
+                $this->check_email_format($this->input_value);
             } else {
                 $this->input_error_set = false;
             }
@@ -66,7 +66,7 @@ class Contact_Message extends Owner_settings{
         $this->sender_email = $email;
         $this->sender_subject = $subject;
         $this->sender_message = $message;
-        $this->process_message
+        $this->process_message();
     }
     
     //method to check for errors in the input
@@ -92,7 +92,7 @@ class Contact_Message extends Owner_settings{
     
     //method to put together the full message that gets sent to you
     function build_email_message() {
-        $this->full_email_message = "New contact message from " . $this->website_name->input_value . "\r\n Sender name: " . $this->sender_name->input_value "\r\n Sender email:" . $this->sender_email->input_value . "\r\n Subject: " . $this->sender_subject->input_value . "\r\n Message: ". $this->sender_message->input_value;
+        $this->full_email_message = "New contact message from " . $this->website_name . "\r\n Sender name: " . $this->sender_name->input_value . "\r\n Sender email: " . $this->sender_email->input_value . "\r\n Subject: " . $this->sender_subject->input_value . "\r\n Message: ". $this->sender_message->input_value;
     }
     
     //function to process and send the message if ready

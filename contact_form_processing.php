@@ -1,5 +1,8 @@
 <?php
-require_once 'contact_form_classes';
+require_once 'contact_form_classes.php';
+
+//Creates objects for each input field if the form was submitted
+//then creates and sends a new message and displays the result
 
 if(isset($_POST['send'])){
     $name = new Input('name');
