@@ -8,3 +8,6 @@ class Owner_settings {
     //The subject that the user enters in the form is added after the default subject part
     protected $website_name = "Sample Website"; //Change this to the name of your website
 }
+$base_color="#FFFFFF";
+$highlight_color="#000080";
+$main_color="#ccccff";
