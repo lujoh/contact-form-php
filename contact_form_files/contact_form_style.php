@@ -6,6 +6,7 @@ require_once '_owner_settings_contact_form.php';
 .contact_form_container {
     width:100%;
     background-color:<?php echo $base_color; ?>;
+    padding:1%;
 }
 /*style of the input fields*/
 .contact_form_container input[type=text], .contact_form_container input[type=email], .contact_form_container textarea{

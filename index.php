@@ -4,7 +4,7 @@
         <title>
             Contact form index file
         </title>
-        <link rel="stylesheet" type="text/css" href="contact_form_style.php">
+        <link rel="stylesheet" type="text/css" href="contact_form_files\contact_form_style.php">
         <meta charset="UTF-8">
         <meta name="author" content="lujoh">
         <style>
@@ -23,7 +23,7 @@
                 Contact form will be displayed below this paragraph.
             </p>
             <?php 
-            require_once "contact_form.php";
+            require_once "contact_form_files\contact_form.php";
                 ?>
         </div>
     </body>
